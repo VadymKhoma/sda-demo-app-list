@@ -9,6 +9,7 @@ import { CartItem } from '../../model/cart-item';
 export class ListComponent implements OnInit {
   @Input() public shopingList: CartItem[];
   @Input() public listName: string;
+  @Input() public magicNumber = 42;
 
   constructor() { }
 

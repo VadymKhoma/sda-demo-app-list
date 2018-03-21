@@ -1,12 +1,15 @@
-<h3>{{ listName }}</h3>
-<ul>
-  <li *ngFor="let element of shopingList">
-    <span style="color: red" *ngIf="element.price > 100">
-      {{ element.name }} - {{ element.price }}
-    </span>
-    <span *ngIf="element.price <= 100">
-      {{ element.name }} - {{ element.price }}
-    </span>
-    <button (click)="removeElement(element)">Delete</button>
-  </li>
-</ul>
+<div *ngIf="shopingList.length > 0" class="list-component">
+  <h3>{{ listName }} - {{ shopingList.length }}</h3>
+  <ul>
+    <li *ngFor="let element of shopingList">
+      <span style="color: red" *ngIf="element.price > 100">
+        {{ element.name }} - {{ element.price }}
+      </span>
+      <span *ngIf="element.price <= 100">
+        {{ element.name }} - {{ element.price }}
+      </span>
+      <button (click)="removeElement(element)">Delete</button>
+    </li>
+  </ul>
+  {{ magicNumber }}
+</div>

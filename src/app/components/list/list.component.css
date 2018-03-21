@@ -1,3 +1,4 @@
-ul {
-    border: solid 2px cornflowerblue
+.list-component {
+    margin-top: 5px;
+    border: solid 2px cornflowerblue;
 }
