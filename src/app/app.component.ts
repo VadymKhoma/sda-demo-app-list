@@ -7,5 +7,5 @@ import { CartItem } from './model/cart-item';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  public currentView = 'homeView';
 }
