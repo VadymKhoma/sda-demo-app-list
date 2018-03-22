@@ -7,6 +7,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeViewComponent } from './views/home-view/home-view.component';
 import { ListViewComponent } from './views/list-view/list-view.component';
 import { ContactViewComponent } from './views/contact-view/contact-view.component';
+import { BlogViewComponent } from './views/blog-view/blog-view.component';
+import { NotFoundViewComponent } from './views/not-found-view/not-found-view.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { ContactViewComponent } from './views/contact-view/contact-view.componen
     NavBarComponent,
     HomeViewComponent,
     ListViewComponent,
-    ContactViewComponent
+    ContactViewComponent,
+    BlogViewComponent,
+    NotFoundViewComponent
   ],
   imports: [
     BrowserModule
