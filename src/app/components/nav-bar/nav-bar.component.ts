@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ViewService } from '../../services/view.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,15 +7,13 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-  @Output() public changeView: EventEmitter<string> = new EventEmitter<string>();
-
-  constructor() { }
+  constructor(private viewService: ViewService) { }
 
   ngOnInit() {
   }
 
   handleChangeView(name: string): void {
-    this.changeView.emit(name);
+    this.viewService.currentView = name;
   }
 
 }

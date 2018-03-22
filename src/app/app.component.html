@@ -1,11 +1,9 @@
-<app-nav-bar (changeView)="currentView = $event"></app-nav-bar>
+<app-nav-bar></app-nav-bar>
 
-<div [ngSwitch]="currentView">
+<div [ngSwitch]="viewService.currentView">
     <app-list-view *ngSwitchCase="'listView'"></app-list-view>
     <app-home-view *ngSwitchCase="'homeView'"></app-home-view>
-    <app-contact-view 
-        (changeView)="currentView = $event"
-        *ngSwitchCase="'contactView'">
+    <app-contact-view *ngSwitchCase="'contactView'">
     </app-contact-view>
     <app-blog-view *ngSwitchCase="'blogView'"></app-blog-view>
     <app-not-found-view *ngSwitchDefault></app-not-found-view>

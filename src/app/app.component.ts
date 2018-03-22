@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CartItem } from './model/cart-item';
+import { ViewService } from './services/view.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,5 @@ import { CartItem } from './model/cart-item';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public currentView = 'homeView';
+  constructor(public viewService: ViewService) {}
 }

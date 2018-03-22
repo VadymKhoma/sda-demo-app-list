@@ -9,6 +9,7 @@ import { ListViewComponent } from './views/list-view/list-view.component';
 import { ContactViewComponent } from './views/contact-view/contact-view.component';
 import { BlogViewComponent } from './views/blog-view/blog-view.component';
 import { NotFoundViewComponent } from './views/not-found-view/not-found-view.component';
+import { ViewService } from './services/view.service';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { NotFoundViewComponent } from './views/not-found-view/not-found-view.com
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    ViewService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
