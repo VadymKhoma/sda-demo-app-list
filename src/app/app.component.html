@@ -1,3 +1,7 @@
 <app-nav-bar (changeView)="currentView = $event"></app-nav-bar>
-<app-list-view *ngIf="currentView === 'listView'"></app-list-view>
-<app-home-view *ngIf="currentView === 'homeView'"></app-home-view>
+
+<div [ngSwitch]="currentView">
+    <app-list-view *ngSwitchCase="'listView'"></app-list-view>
+    <app-home-view *ngSwitchCase="'homeView'"></app-home-view>
+    <app-contact-view *ngSwitchCase="'contactView'"></app-contact-view>
+</div>

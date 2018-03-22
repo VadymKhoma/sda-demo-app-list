@@ -6,6 +6,7 @@ import { ListComponent } from './components/list/list.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeViewComponent } from './views/home-view/home-view.component';
 import { ListViewComponent } from './views/list-view/list-view.component';
+import { ContactViewComponent } from './views/contact-view/contact-view.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ListViewComponent } from './views/list-view/list-view.component';
     ListComponent,
     NavBarComponent,
     HomeViewComponent,
-    ListViewComponent
+    ListViewComponent,
+    ContactViewComponent
   ],
   imports: [
     BrowserModule
