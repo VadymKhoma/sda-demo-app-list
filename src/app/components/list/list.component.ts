@@ -21,4 +21,11 @@ export class ListComponent implements OnInit {
       return item !== element;
     });
   }
+
+  handleAddNewItem(name: string) {
+    this.shopingList.push({
+      name: name,
+      price: 0,
+    });
+  }
 }

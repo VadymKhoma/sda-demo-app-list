@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-list-input',
@@ -7,6 +8,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class ListInputComponent implements OnInit {
   @ViewChild('itemNameInput') public inputFromHtml: ElementRef;
+  @Output() public newItem: EventEmitter<string> = new EventEmitter<string>();
 
   public isSubmitButtonDisabled = true;
   constructor() { }
@@ -15,7 +17,9 @@ export class ListInputComponent implements OnInit {
   }
 
   addItem(name: string): void {
-    console.log(name);
+    this.newItem.emit(name);
+    this.inputFromHtml.nativeElement.value = '';
+    this.checkButton();
   }
 
   checkButton() {

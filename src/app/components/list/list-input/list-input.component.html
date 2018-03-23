@@ -1,5 +1,6 @@
 <input #itemNameInput 
   (input)="checkButton()"
+  (keydown.enter)="addItem(itemNameInput.value)"
 placeholder="Enter item name">
 <button [disabled]="isSubmitButtonDisabled"
         (click)="addItem(itemNameInput.value)">
