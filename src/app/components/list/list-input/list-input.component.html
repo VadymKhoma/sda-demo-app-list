@@ -1,0 +1,8 @@
+<input #itemNameInput 
+  (input)="checkButton()"
+placeholder="Enter item name">
+<button [disabled]="isSubmitButtonDisabled"
+        (click)="addItem(itemNameInput.value)">
+        Add
+</button>
+{{ itemNameInput.value }}

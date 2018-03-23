@@ -1,5 +1,6 @@
 <div *ngIf="shopingList.length > 0" class="list-component">
   <h3>{{ listName }} - {{ shopingList.length }}</h3>
+  <app-list-input></app-list-input>
   <ul>
     <li *ngFor="let element of shopingList">
       <span style="color: red" *ngIf="element.price > 100">

@@ -10,6 +10,7 @@ import { ContactViewComponent } from './views/contact-view/contact-view.componen
 import { BlogViewComponent } from './views/blog-view/blog-view.component';
 import { NotFoundViewComponent } from './views/not-found-view/not-found-view.component';
 import { ViewService } from './services/view.service';
+import { ListInputComponent } from './components/list/list-input/list-input.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ViewService } from './services/view.service';
     ListViewComponent,
     ContactViewComponent,
     BlogViewComponent,
-    NotFoundViewComponent
+    NotFoundViewComponent,
+    ListInputComponent
   ],
   imports: [
     BrowserModule
